@@ -1,5 +1,7 @@
 @import url('https://fonts.cdnfonts.com/css/general-sans');
 @import "tailwindcss";
+@variant dark (&:where(.dark,.dark *));
+
 
 *{
     scroll-behavior: smooth;
@@ -20,5 +22,9 @@ body.dark{
 @layer utilities {
     .background-gradient {
         @apply bg-gradient-to-b from-[#0088B6] to-[#48CAE4];
+    }
+
+    .hover-gradient {
+        @apply hover:bg-gradient-to-r from-slate-200 to-slate-50;
     }
 }
